@@ -24,7 +24,7 @@ class NativeBridge(private val context: Context) {
 
             val computedParams = parseJsonToMap(params);
 
-            method.invoke(instance, this, computedParams)
+            method.invoke(instance, computedParams)
         } catch (e: Exception) {
             Log.e("NativeBridge", "Error invoking method: ${e.message}", e)
         }
